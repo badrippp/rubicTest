@@ -41,6 +41,8 @@ namespace WebApplication1
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(option => option.WithOrigins("http://localhost:8080/login").AllowAnyHeader());
+
             app.UseRouting();
 
             app.UseAuthorization();
